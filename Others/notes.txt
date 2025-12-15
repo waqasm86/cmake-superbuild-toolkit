@@ -1,0 +1,29 @@
+cmake-superbuild-toolkit/
+├── CMakeLists.txt
+├── cmake/
+│   ├── Toolchains/
+│   │   ├── linux-gcc.cmake
+│   │   ├── windows-msvc.cmake
+│   ├── Dependencies/
+│   │   ├── fmt.cmake
+│   │   ├── spdlog.cmake
+│   ├── CompilerWarnings.cmake
+│   ├── Sanitizers.cmake
+│   ├── InstallHelpers.cmake
+│   └── Versioning.cmake
+├── src/
+│   ├── main.cpp
+│   └── app/
+│       ├── app.cpp
+│       └── app.h
+├── tests/
+│   └── test_app.cpp
+├── examples/
+│   └── minimal_usage.cpp
+├── packaging/
+│   └── CPackConfig.cmake
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+├── README.md
+└── LICENSE

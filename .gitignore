@@ -1,0 +1,21 @@
+# Build outputs
+/build/
+**/CMakeFiles/
+**/CMakeCache.txt
+**/cmake_install.cmake
+**/Makefile
+**/*.ninja
+**/*.ninja_deps
+**/*.ninja_log
+compile_commands.json
+
+# FetchContent (if it ever lands outside build)
+_deps/
+
+# IDE/editor
+.cache/
+.vscode/
+.idea/
+*.user
+*.swp
+*.swo
