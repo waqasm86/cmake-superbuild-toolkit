@@ -1,0 +1,22 @@
+
+Now commit it:
+- Commit message: `Improve README (Build Tools focus)`
+
+---
+
+## Part C — Create Release v0.1.0 with CPack artifacts (most important)
+
+This is the “Build Tools” finishing move.
+
+### Step 1: Build and create packages locally
+On your Xubuntu terminal:
+
+```bash
+cd /media/waqasm86/External1/Project-CPP/Project-Qt/cmake-superbuild-toolkit
+
+rm -rf build
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DMYAPP_ENABLE_PACKAGING=ON
+cmake --build build
+
+# Create the CPack packages
+cpack --config build/CPackConfig.cmake
