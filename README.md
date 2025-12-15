@@ -5,13 +5,13 @@
 **A Qt-style build tooling demo** focused on **reproducible builds, packaging, CI, and downstream consumption**.
 
 This repository is intentionally light on application logic and heavy on **build-system architecture**.  
-It demonstrates modern CMake patterns commonly required in large, cross-platform C++ frameworks (such as Qt): dependency bootstrapping, feature options, install/export, continuous integration, and packaging.
+**The C++ code is intentionally minimal** — the goal is to demonstrate build tooling patterns used in large, cross-platform C++ frameworks (like Qt): dependency bootstrapping, feature options, install/export, continuous integration, and packaging.
 
 ---
 
 ## Why this project exists (Build Tools focus)
 
-This project demonstrates build-system responsibilities typically owned by a **Build Tools** team:
+This project demonstrates build-system responsibilities commonly owned by a **Build Tools** team:
 
 - **Modern CMake** with strict target-based usage and namespaced aliases (`MyApp::myapp`)
 - **Superbuild-style dependency management** using `FetchContent`
@@ -21,21 +21,10 @@ This project demonstrates build-system responsibilities typically owned by a **B
 - **CPack** packaging (TGZ / ZIP)
 - **CI build matrix** (Linux + Windows, Debug/Release, features on/off)
 
-The design mirrors real-world requirements of large frameworks where:
+The design reflects real-world framework requirements where:
 - consumers must not depend on internal layout
 - packaging must be reproducible
-- configuration options must remain stable over time
-
----
-
-## Features
-
-- Dependency bootstrapping via `FetchContent`
-- Optional logging (`spdlog`)
-- Optional testing (`Catch2`)
-- Exported CMake package configuration
-- Cross-platform CI (GitHub Actions)
-- Binary packaging via CPack
+- configuration options must stay stable over time
 
 ---
 
