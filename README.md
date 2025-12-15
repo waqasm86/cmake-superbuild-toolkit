@@ -1,3 +1,5 @@
+![CI](https://github.com/waqasm86/cmake-superbuild-toolkit/actions/workflows/ci.yml/badge.svg)
+
 # CMake Superbuild Toolkit
 
 **A Qt-style build tooling demo** focused on **reproducible builds, packaging, CI, and downstream consumption**.
