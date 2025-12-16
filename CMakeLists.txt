@@ -53,12 +53,11 @@ target_link_libraries(myapp
     fmt::fmt
 )
 
+target_compile_definitions(myapp PUBLIC MYAPP_ENABLE_LOGGING=$<BOOL:${MYAPP_ENABLE_LOGGING}>)
+
+
 if(MYAPP_ENABLE_LOGGING)
-  target_link_libraries(myapp
-    PRIVATE
-      $<BUILD_INTERFACE:spdlog::spdlog_header_only>
-  )
-  target_compile_definitions(myapp PUBLIC MYAPP_ENABLE_LOGGING=1)
+  target_link_libraries(myapp PRIVATE spdlog::spdlog_header_only)
 endif()
 
 # Platform markers (Qt-style pragmatism)
