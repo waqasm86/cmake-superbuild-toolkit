@@ -16,6 +16,7 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
+      
       - uses: actions/checkout@v4
 
       - name: Configure
@@ -32,4 +33,6 @@ jobs:
         run: ctest --test-dir build --output-on-failure -C ${{ matrix.build_type }}
 
       - name: Package
+        if: ${{ matrix.build_type == 'Release' }}
         run: cmake --build build --target package --config ${{ matrix.build_type }}
+
