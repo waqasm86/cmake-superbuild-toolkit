@@ -19,3 +19,13 @@ _deps/
 *.user
 *.swp
 *.swo
+
+# CMake build folders
+build*/
+_CPack_Packages/
+
+# CPack / release artifacts
+*.tar.gz
+*.tar.Z
+*.zip
+*.sh
